@@ -10,7 +10,91 @@
   </head>
   <body>
     <div class="wrap">
-      <div class="section4 Jsection"></div>
+      <div class="section4 Jsection">
+        <div class="doc">
+          <p class="next"><span></span></p>
+          <div class="picList show">
+            <div class="pic on">
+              <div class="pic-wrap">
+                <div class="smallPic smallPic1"></div>
+                <div class="bigPic bigPic1">
+                  <img
+                    src="./assets/page4-pic1-on.jpg"
+                    alt="img"
+                    width="780"
+                    height="438"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="pic">
+              <div class="pic-wrap">
+                <div class="smallPic smallPic2"></div>
+                <div class="bigPic bigPic2">
+                  <img
+                    src="./assets/page4-pic1-on.jpg"
+                    alt="img"
+                    width="780"
+                    height="438"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="pic">
+              <div class="pic-wrap">
+                <div class="smallPic smallPic3"></div>
+                <div class="bigPic bigPic3">
+                  <img
+                    src="./assets/page4-pic1-on.jpg"
+                    alt="img"
+                    width="780"
+                    height="438"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="pic">
+              <div class="pic-wrap">
+                <div class="smallPic smallPic4"></div>
+                <div class="bigPic bigPic4">
+                  <img
+                    src="./assets/page4-pic1-on.jpg"
+                    alt="img"
+                    width="780"
+                    height="438"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="pic">
+              <div class="pic-wrap">
+                <div class="smallPic smallPic5"></div>
+                <div class="bigPic bigPic5">
+                  <img
+                    src="./assets/page4-pic1-on.jpg"
+                    alt="img"
+                    width="780"
+                    height="438"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $(".picList .pic").click(function() {
+          $(".picList .pic").removeClass("on");
+          $(this).addClass("on");
+        });
+        $(".picList .pic").hover(function() {
+          $(".picList .pic").removeClass("on");
+          $(this).addClass("on");
+        });
+      });
+    </script>
   </body>
 </html>
