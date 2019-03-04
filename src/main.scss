@@ -45,21 +45,21 @@
     left: 50%;
     margin-left: -600px;
     top: 200px;
-    &.show {
-      .pic {
-        @for $i from 1 through 5 {
-          &:nth-child($i) {
-            .pic-wrap {
-              opacity: 1;
-              -webkit-transform: translate(0, 0);
-              -moz-transform: translate(0, 0);
-              -ms-transform: translate(0, 0);
-              transform: translate(0, 0);
-            }
-          }
-        }
-      }
-    }
+    // &.show {
+    // .pic {
+    // @for $i from 1 through 5 {
+    // &:nth-child($i) {
+    //   .pic-wrap {
+    //     opacity: 1;
+    //     -webkit-transform: translate(0, 0);
+    //     -moz-transform: translate(0, 0);
+    //     -ms-transform: translate(0, 0);
+    //     transform: translate(0, 0);
+    //   }
+    // }
+    // }
+    // }
+    // }
     .pic {
       float: left;
       position: relative;
@@ -71,20 +71,20 @@
       -ms-transition: all 0.6s;
       transition: all 0.6s;
 
-      @for $b from 1 through 5 {
-        &:nth-child($b) {
-          .pic-wrap {
-            -webkit-transform: translate($b * 20px-4 * 20px, 0);
-            -moz-transform: translate($b * 20px-4 * 20px, 0);
-            -ms-transform: translate($b * 20px-4 * 20px, 0);
-            transform: translate($b * 20px-4 * 20px, 0);
-            -webkit-transition: all 0.6s ease;
-            -moz-transition: all 0.6s ease;
-            -ms-transition: all 0.6s ease;
-            transition: all 0.6s ease;
-          }
-        }
-      }
+      // @for $b from 1 through 5 {
+      //   &:nth-child($b) {
+      //     .pic-wrap {
+      //       -webkit-transform: translate($b * 20px-4 * 20px, 0);
+      //       -moz-transform: translate($b * 20px-4 * 20px, 0);
+      //       -ms-transform: translate($b * 20px-4 * 20px, 0);
+      //       transform: translate($b * 20px-4 * 20px, 0);
+      //       -webkit-transition: all 0.6s ease;
+      //       -moz-transition: all 0.6s ease;
+      //       -ms-transition: all 0.6s ease;
+      //       transition: all 0.6s ease;
+      //     }
+      //   }
+      // }
 
       &.on {
         width: 812px;
