@@ -1,11 +1,14 @@
 const path = require("path");
-const { WebPlugin } = require("web-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-
+const srcDir = path.resolve(__dirname, "src");
 module.exports = {
   output: {
     publicPath: "",
     filename: "[name].js"
+  },
+  externals: {
+    jquery: "jQuery"
   },
   resolve: {
     // 加快搜索速度
@@ -53,11 +56,12 @@ module.exports = {
     ]
   },
   entry: {
-    main: "./src/main.js"
+    main: "./src/main.js",
+    app: path.resolve(srcDir, "app.js")
   },
   plugins: [
-    new WebPlugin({
-      template: "./src/index.html",
+    new HtmlWebpackPlugin({
+      template: "html-withimg-loader!" + path.resolve(srcDir, "index.html"),
       filename: "index.html"
     }),
     new ExtractTextPlugin({

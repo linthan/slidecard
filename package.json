@@ -22,5 +22,8 @@
     "url-loader": "^1.1.2",
     "webpack": "^3.5.5",
     "webpack-dev-server": "^2.7.1"
+  },
+  "dependencies": {
+    "jquery": "3.3.1"
   }
 }

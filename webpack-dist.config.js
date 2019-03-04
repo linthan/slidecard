@@ -6,7 +6,6 @@ const UglifyJsPlugin = require("webpack/lib/optimize/UglifyJsPlugin");
 const DefinePlugin = require("webpack/lib/DefinePlugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const EndWebpackPlugin = require("end-webpack-plugin");
-const { WebPlugin } = require("web-webpack-plugin");
 const ghpages = require("gh-pages");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
@@ -29,6 +28,9 @@ module.exports = {
     path: outputPath,
     publicPath: "/slidecard",
     filename: "[name]_[chunkhash:8].js"
+  },
+  externals: {
+    jquery: "jQuery"
   },
   resolve: {
     // 加快搜索速度
@@ -78,7 +80,8 @@ module.exports = {
     ]
   },
   entry: {
-    main: "./src/main.js"
+    main: "./src/main.js",
+    app: path.resolve(srcDir, "app.js")
   },
   plugins: [
     new DefinePlugin({
