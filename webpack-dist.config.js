@@ -25,7 +25,7 @@ const outputPath = path.resolve(__dirname, ".public");
 module.exports = {
   output: {
     path: outputPath,
-    publicPath: "",
+    publicPath: "/slidecard",
     filename: "[name]_[chunkhash:8].js"
   },
   resolve: {
@@ -65,7 +65,7 @@ module.exports = {
           {
             loader: "url-loader",
             options: {
-              name: "[name].[ext]",
+              name: "[name]-[hash:5].[ext]",
               limit: 20000, // size <= 20KB
               publicPath: "static/",
               outputPath: "static/"
