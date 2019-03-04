@@ -8,6 +8,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const EndWebpackPlugin = require("end-webpack-plugin");
 const { WebPlugin } = require("web-webpack-plugin");
 const ghpages = require("gh-pages");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 function publishGhPages() {
   return new Promise((resolve, reject) => {
@@ -22,6 +23,7 @@ function publishGhPages() {
 }
 
 const outputPath = path.resolve(__dirname, ".public");
+const srcDir = path.resolve(__dirname, "src");
 module.exports = {
   output: {
     path: outputPath,
@@ -100,8 +102,9 @@ module.exports = {
         reduce_vars: true
       }
     }),
-    new WebPlugin({
-      template: "./src/index.html",
+    //解决html里面图片不能处理的问题
+    new HtmlWebpackPlugin({
+      template: "html-withimg-loader!" + path.resolve(srcDir, "index.html"),
       filename: "index.html"
     }),
     new ExtractTextPlugin({
